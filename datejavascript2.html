@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Current Date and Time</title>
+   <script>
+        function displayDateTime() {
+            var currentDateTime = new Date();
+
+            var options = { 
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+                hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true 
+            };
+            var formattedDateTime = currentDateTime.toLocaleDateString('en-US', options) + ' ' + currentDateTime.toLocaleTimeString('en-US');
+
+            document.getElementById("result").innerHTML = "Current Date and Time: " + formattedDateTime;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Click here to Display the Current Date and Time</h2>
+    <button onclick="displayDateTime()">Show Date and Time</button>
+    <p id="result"></p>
+
+</body>
+</html>
