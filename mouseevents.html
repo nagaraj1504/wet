@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Over and Click Events</title>
+    <style>
+        #targetElement {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(49, 123, 148);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            border: 2px solid rgb(66, 66, 209);
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <u><b><h1>mouse events</h1></b></u>
+    <div id="targetElement">
+        Hover or Click Me!
+    </div>
+
+    <script>
+        const targetElement = document.getElementById('targetElement');
+
+        targetElement.addEventListener('mouseover', function() {
+            targetElement.style.backgroundColor = 'lightyellow';
+            targetElement.textContent = 'Mouse Over!';
+        });
+
+        targetElement.addEventListener('mouseout', function() {
+            targetElement.style.backgroundColor = 'lightblue';
+            targetElement.textContent = 'Hover on Me! or Click Me!';
+        });
+
+        targetElement.addEventListener('click', function() {
+            targetElement.style.backgroundColor = 'green';
+            targetElement.textContent = 'Clicked!';
+        });
+    </script>
+</body>
+</html>
